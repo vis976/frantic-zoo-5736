@@ -23,9 +23,10 @@ import {
       <Box bg="#f4f7fb" color={useColorModeValue("gray.700", "gray.200")} py={10}>
         <Container as={Stack} maxW={"100%"}  color="#4f585e" px="50px">
           <SimpleGrid
-            columns={{ base: 1, sm: 2, md: 4 }}
+            columns={[1, 2, 3]}
             spacing={15}
           >
+            
             <Stack align={"flex-start"} spacing="22px">
               <Stack align={"flex-start"} spacing="6px">
                 <Heading
@@ -71,6 +72,7 @@ import {
                   Partner with PharmEasy
                 </Link>
               </Stack>
+              
               {/* ok */}
               <Stack align={"flex-start"} spacing="6px">
                 <Heading

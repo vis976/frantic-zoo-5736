@@ -1,9 +1,9 @@
-import Footer from "../Components/Footer"
+import HealthCare from "../Components/HomeComponents/HealthCare"
 
 function Home (){
     return (
         <div>
-           <Footer />
+           <HealthCare />
         </div>
     )
 }
