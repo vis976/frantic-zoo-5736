@@ -1,0 +1,25 @@
+.className{
+    font-size:50px;
+    size: 5rem;
+    width: 30rem;
+}
+.nav{
+    height: 10rem;
+    background: rgb(0, 255, 106);
+    position: fixed;
+    width: 100%;
+}
+.notNav{
+    height: 4rem;
+    background: rgb(227, 0, 0);
+    position: fixed;
+    width: 100%;
+}
+.extendedNav{
+    border: 3px solid black;
+    height:128px;
+}
+.smallNav{
+    height: 128px;
+    border: 3px solid red;
+}

@@ -15,15 +15,14 @@ import {
   import { AiOutlineInstagram } from "react-icons/ai";
   import { AiOutlineTwitter } from "react-icons/ai";
   import { FaFacebookF } from "react-icons/fa";
-  import { FaYoutube } from "react-icons/fa";
-  
-  
+  import { FaYoutube } from "react-icons/fa"; 
   export default function Footer() {
     return (
+      <>
       <Box bg="#f4f7fb" color={useColorModeValue("gray.700", "gray.200")} py={10}>
         <Container as={Stack} maxW={"100%"}  color="#4f585e" px="50px">
           <SimpleGrid
-            columns={[1, 2, 3]}
+            columns={[1, 2, 4]}
             spacing={15}
           >
             
@@ -408,6 +407,7 @@ import {
               </Flex>
         </Flex>
       </Box>
+      </>
     );
   }
   

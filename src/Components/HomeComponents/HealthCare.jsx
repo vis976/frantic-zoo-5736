@@ -10,11 +10,11 @@ export const HealthCare = () => {
     console.log(data)
   return (
     <div>
-        <SimpleGrid columns={[1, 2, 3]}>
+        <SimpleGrid columns={[1, 2, 3]} p="2rem" spacing='1rem'>
       {
       data.map((el)=>(
-              <Box key={el.id}>
-                <img src={el.image} alt="" />
+              <Box key={el.id} border="1px solid black" w="80%" p="1rem" h="auto">
+                <img height={"150px"} width='80%' src={el.image} alt="" />
                 <Text>{el.title}</Text>
                 <Text>₹ {el.price}</Text>
             </Box>
