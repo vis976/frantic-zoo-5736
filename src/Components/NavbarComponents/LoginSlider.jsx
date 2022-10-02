@@ -17,7 +17,7 @@ import { useNavigate } from "react-router-dom"
 // import Navbar from "../Navbar"
 
 export const LoginSlider = () => {
-  const [auth,setAuth] = useState(false)
+  const [auth,setAuth] = useState(true)
   const navigate = useNavigate()
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
@@ -34,7 +34,7 @@ export const LoginSlider = () => {
     console.log(data1)
     if(data1.email===formData1.email && data1.password===formData1.password){
       alert("Login Success....")
-      setAuth(true)
+      setAuth(!auth)
       navigate("/healthcare/products")
     }else{
       alert("Try again Later....!!!")
