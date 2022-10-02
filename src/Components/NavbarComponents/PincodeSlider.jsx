@@ -21,6 +21,11 @@ export function PincodeSlider() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const firstField = React.useRef();
 
+  function handleCheck(){
+    alert("Delivery is available in your area you can order now...")
+  }
+
+  
   return (
     <>
       <Button
@@ -94,6 +99,7 @@ export function PincodeSlider() {
                   color="#fff"
                   _hover={{ bg: "#159a94" }}
                   borderLeftRadius="none"
+                  onClick={handleCheck}
                 >
                   Check
                 </Button>
