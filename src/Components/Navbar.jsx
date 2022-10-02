@@ -16,15 +16,11 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, SearchIcon } from "@chakra-ui/icons";
  import { PincodeSlider } from "../Components/NavbarComponents/PincodeSlider.jsx";
-// import { LoginSignupSlider } from "../Components/NavbarComponents/LoginSignupSlider";
  import { useState } from "react";
 import { Link } from "react-router-dom";
-//import { useDispatch, useSelector } from "react-redux";
-// import { LoginSLider } from "./NavbarComponents/LoginSlider";
-// import { LoginIndivisualSlider } from "./NavbarComponents/LoginIndivisualSlider";
-// import { getCartItems } from "../Redux/Cart/action";
-
-const Navbar = () => {
+ import { LoginSlider } from "./NavbarComponents/LoginSlider";
+import { SignupSlider } from "./NavbarComponents/SignupSlider";
+const Navbar = ({auth}) => {
   const { isOpen, onToggle } = useDisclosure();
 
   const [nav, setNav] = useState(false);
@@ -38,29 +34,18 @@ const Navbar = () => {
       document.body.scrollTop > 80 ||
       document.documentElement.scrollTop > 80
     ) {
-      setNav(false);
-    } else {
       setNav(true);
+    } else {
+      setNav(false);
     }
   }
   let cartData = "cart"
-// const isAuth=useSelector((store)=>store.auth.isAuth)
-//   console.log(isAuth,"isauth")
-//   const userId= useSelector((store)=>store.auth.id)
-
-//   //! total cart items
-//   const dispatch = useDispatch();
-//   useEffect(() => {
-//     if(userId){
-//       dispatch(getCartItems(userId))
-//     }
-//   },[dispatch])
-//   const cartData= useSelector((store)=>store.cart.cart)
 
   return (
+    <>
+   
     <Box height={nav ? "123px" : "80px"}>
       <Box
-        // className={nav ? "nav" : "notNav"}
         position="fixed"
         w="100%"
         bg="rgb(238,244,255) none repeat scroll 0% 0% / auto padding-box border-box"
@@ -68,8 +53,6 @@ const Navbar = () => {
         outline="rgb(79, 88, 94) none 0px"
         vertical-align="baseline"
         zIndex={200}
-        // border = "0px none rgb(79, 88, 94)"
-        // border="2px solid red"
         height={nav ? "123px" : "80px"}
         transition="all 0.4s ease"
       >
@@ -164,25 +147,30 @@ const Navbar = () => {
                   </Button>
                 </Box>
               </Flex>
-              {!nav && (
+              {/* {!nav && ( */}
                 <HStack w="22%" justify="space-between" px={"2%"}>
-                  <Flex>
-                    <Image src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" />
-                    {/* <LoginSignupSlider /> */}
+                   <Flex>
+                      <Image c='black' src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" />
                   </Flex>
+                  <Box><SignupSlider />
+                    </Box>
+                    <Box>
+                    <LoginSlider />
+                    </Box>
+                 
                   <Link to="/cart">
                     <Flex  position="relative">
-                      <Image src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" />
-                      <Text color="white">Cart</Text>
+                      <Image color='black' src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" />
+                      <Text color="black">Cart</Text>
                       <Center position="absolute" left="-2" top="-2" variant="solid" bg="#f76b6c" colorscheme="#f76b6c" borderRadius="50" w="1.6rem" h="1rem" color="white" fontSize="11" fontWeight="bold">
                         {cartData?.length}
                       </Center>
                     </Flex>
                   </Link>
                 </HStack>
-              )}
+              {/* // )} */}
             </Box>
-            {nav && (
+            {/* {nav && ( */}
               <Flex
                 display={{ base: "none", md: "flex" }}
                 ml={10}
@@ -257,13 +245,8 @@ const Navbar = () => {
                       <Image color='black' src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" />
                       <Text color="black">Offers</Text>
                     </Flex>
-                    <Flex>
-                      <Image color='black' src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" />
-                      {/* {isAuth &&} */}
-                      {/* <LoginIndivisualSlider font={'16px'} color={'#fff'} /> */}
-                      {/* <LoginSLider/> */}
-                    </Flex>
-                    <Link to="/cart">
+                   
+                    {/* <Link to="/cart">
                       <Flex position="relative">
                         <Image color={"black"} src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" />
                         <Text color="black">Cart</Text>
@@ -271,11 +254,11 @@ const Navbar = () => {
                         {cartData?.length}
                       </Center>
                       </Flex>
-                    </Link>
+                    </Link> */}
                   </Flex>
                 </Flex>
               </Flex>
-            )}
+            {/* )} */}
           </Box>
         </Flex>
 
@@ -288,7 +271,27 @@ const Navbar = () => {
 
         <Collapse in={isOpen} animateOpacity></Collapse>
       </Box>
+     
     </Box>
+    {/* <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/">Action</a>
+          <a class="dropdown-item" href="/">Another action</a>
+          <a class="dropdown-item" href="/">Something else here</a>
+        </div>
+      </li>
+</nav>
+    </div> */}
+    </>
   );
 };
 

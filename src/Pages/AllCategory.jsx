@@ -1,7 +1,8 @@
-import { Box } from '@chakra-ui/react'
+import { Box, Center } from '@chakra-ui/react'
 import React from 'react'
-import AllCatagorymenu from '../Components/AllCategory.jsx/AllCatagorymenu'
-import AllCatagoryDescription from '../Components/AllCategory.jsx/AllCategoryDescription'
+import AllCatagorymenu from '../Components/AllCategoryComponents/AllCatagorymenu'
+import AllCatagoryDescription from '../Components/AllCategoryComponents/AllCategoryDescription'
+import AllCatagoryCarousel from '../Components/AllCategoryComponents/AllCatagoryCarousel'
 
 export const AllCategory = () => {
   return (
@@ -12,9 +13,9 @@ export const AllCategory = () => {
       margin="auto"
       //  overflow="hidden"
       >
-        {/* <Center   my="30px">
-          <AllCatagoryCarousel/>
-        </Center> */}
+        <Center   my="30px">
+          <AllCatagoryCarousel />
+        </Center>
           <AllCatagorymenu />
           <AllCatagoryDescription />
       </Box>
