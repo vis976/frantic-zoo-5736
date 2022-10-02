@@ -29,7 +29,8 @@ export const SignupSlider = () => {
     if(formData.email===undefined || formData.password===undefined){
       alert("Fill all Fields")
     }else{
-    localStorage.setItem("login",JSON.stringify(formData))     
+    localStorage.setItem("login",JSON.stringify(formData))   
+    alert("SignUp successfully...")  
     }
   }
 console.log(formData)

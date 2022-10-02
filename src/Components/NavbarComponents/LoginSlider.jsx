@@ -40,14 +40,14 @@ export const LoginSlider = () => {
       alert("Try again Later....!!!")
     }
   }
-  function authchange () {
-    setAuth(!auth)
-  }
+  // function authchange () {
+  //   setAuth(!auth)
+  // }
 
   return (
     <>
       <Button colorScheme='teal' width='80%' onClick={onOpen}>
-      <Text onClick={authchange}> {auth ? "Login" : "Logout" } </Text>
+      <Text>Login</Text>
       </Button>
       <Drawer
         isOpen={isOpen}

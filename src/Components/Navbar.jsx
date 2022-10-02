@@ -41,6 +41,14 @@ const Navbar = () => {
   }
   let cartData = "cart"
 
+  let data1 = JSON.parse(localStorage.getItem("login"))
+   
+  console.log("data1", data1)
+
+  function handleLogout(){
+    localStorage.clear()
+  }
+
   return (
     <>
    
@@ -153,12 +161,17 @@ const Navbar = () => {
                       <Image c='black' src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" />
                   </Flex>
                    {/* Drop Down Login And  SignUp */}
-                  <Box><SignupSlider />
+                   {
+                    data1 ? <Button colorScheme='teal' width='80%' onClick={handleLogout}>
+                    Logout
+                  </Button> : <Flex gap={"5px"}><SignupSlider /> <LoginSlider /></Flex> 
+                   }
+                  {/* <Box><SignupSlider />
                     </Box>
                     <Box>
                     <LoginSlider />
                     </Box>
-                 
+                  */}
                   <Link to="/cart">
                     <Flex  position="relative">
                       <Image color='black' src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" />
@@ -259,17 +272,17 @@ const Navbar = () => {
                       <Image color='black' src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" />
                       <Text color="black">Offers</Text>
                     </Flex>
-                    <Box><SignupSlider />
-                    </Box>
-                    <Box>
-                    <LoginSlider />
-                    </Box>
+                    {
+                    data1 ? <Button colorScheme='teal' width='80%' onClick={handleLogout}>
+                    Logout
+                  </Button> : <Flex gap={"5px"}><SignupSlider /><LoginSlider /></Flex> 
+                   }
                     <Link to="/cart">
                       <Flex position="relative">
                         <Image color={"black"} src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" />
                         <Text color="black">Cart</Text>
                         <Center position="absolute" left="-3" top="-2" variant="solid" bg="#f76b6c" colorscheme="#f76b6c" borderRadius="60" w="1.6rem" h="1rem" color="black" fontSize="11" fontWeight="bold">
-                        {cartData?.length}
+                        {/* {cartData?.length} */}
                       </Center>
                       </Flex>
                     </Link>
