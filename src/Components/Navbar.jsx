@@ -162,7 +162,7 @@ const Navbar = () => {
                   </Flex>
                    {/* Drop Down Login And  SignUp */}
                    {
-                    data1 ? <Button colorScheme='teal' width='80%' onClick={handleLogout}>
+                    data1 ? <Button colorScheme='teal' width='50%' onClick={handleLogout}>
                     Logout
                   </Button> : <Flex gap={"5px"}><SignupSlider /> <LoginSlider /></Flex> 
                    }
@@ -273,7 +273,7 @@ const Navbar = () => {
                       <Text color="black">Offers</Text>
                     </Flex>
                     {
-                    data1 ? <Button colorScheme='teal' width='80%' onClick={handleLogout}>
+                    data1 ? <Button colorScheme='teal' width='30%' onClick={handleLogout}>
                     Logout
                   </Button> : <Flex gap={"5px"}><SignupSlider /><LoginSlider /></Flex> 
                    }
