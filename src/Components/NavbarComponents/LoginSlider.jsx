@@ -14,7 +14,7 @@ import {
   Box,
 } from '@chakra-ui/react'
 import { useNavigate } from "react-router-dom"
-import Navbar from "../Navbar"
+// import Navbar from "../Navbar"
 
 export const LoginSlider = () => {
   const [auth,setAuth] = useState(false)
@@ -84,7 +84,7 @@ export const LoginSlider = () => {
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
-      <Navbar auth={auth}/>
+      {/* <Navbar auth={auth}/> */}
     </>
   )
 }

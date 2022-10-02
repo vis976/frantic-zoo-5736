@@ -20,7 +20,7 @@ import { HamburgerIcon, CloseIcon, SearchIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
  import { LoginSlider } from "./NavbarComponents/LoginSlider";
 import { SignupSlider } from "./NavbarComponents/SignupSlider";
-const Navbar = ({auth}) => {
+const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
 
   const [nav, setNav] = useState(false);
