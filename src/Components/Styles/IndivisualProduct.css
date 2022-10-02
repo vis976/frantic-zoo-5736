@@ -1,7 +1,7 @@
 .leftInd{
     /* border: 2px solid red; */
     width:70%;
-    height: 50rem;
+    height: 30rem;
     margin-bottom: 100px ;
     overflow:scroll;
     overflow-x:hidden;
@@ -24,16 +24,16 @@
     /* height: 100%; */
     margin: auto;
 }
-.image-hover{
+/* .image-hover{
     position: absolute;
   top: 0;
   /* right: 15%; */
   /* left: 25%; */
-  bottom: 0;
+  /* bottom: 0;
   object-fit: contain;
   opacity: 0;
   transition: opacity .1s;
-}
+} */ 
 .image-main{
     position: absolute;
   top: 0;
@@ -44,18 +44,18 @@
   opacity: 1;
   transition: opacity .1s;
 }
-.figure:hover .image-main {
+/* .figure:hover .image-main {
   position: absolute;
   /* top: 0; */
   /* right: 0; */
   /* left: 0; */
   /* bottom: 0; */
-  object-fit: contain;
+  /* object-fit: contain;
   opacity: 0;
   transition: opacity .1s;
 
-}
-.figure:hover .image-hover {
+} */ 
+/* .figure:hover .image-hover {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -63,4 +63,4 @@
     opacity: 1;
     transition: opacity .6s;
 
-}
+} */

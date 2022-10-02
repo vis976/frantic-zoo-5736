@@ -9,6 +9,7 @@ import { TiStarHalfOutline } from "react-icons/ti";
 import { FaRegStar } from "react-icons/fa";
 import { BiChevronRight } from "react-icons/bi";
 import "../Components/Styles/IndivisualProduct.css"
+import StatisticsAllCatagory from '../Components/AllCategoryComponents/StatisticsAllCatagory'
 import {
   Box,
   Button,
@@ -30,6 +31,14 @@ const IndivisualProduct = () => {
     healthCareData().then((res) => setIndivisualProduct(res.data)).catch((err) => console.log(err))
    },[id])
    console.log("setIndivisualProduct", indivisualProduct)
+   
+   let cartBag=[]
+
+   function handleCart () {
+      cartBag.push(indivisualProduct)
+      localStorage.setItem("cartData",JSON.stringify(indivisualProduct))   
+   }
+ 
 
 
   return (
@@ -228,7 +237,7 @@ const IndivisualProduct = () => {
              w="9rem"
              transition="all 0.4s ease"
              _hover={{bg:"#129b94", transition:"all 0.4s ease"}}
-            //  onClick={()=>{handleCart(indivisualProduct?._id)}}
+             onClick={handleCart}
            >
              Add To Cart
            </Button>
@@ -335,6 +344,7 @@ const IndivisualProduct = () => {
    </Box>
  </Flex>
  </Box>
+ <StatisticsAllCatagory />
 </Box>
 );
 };

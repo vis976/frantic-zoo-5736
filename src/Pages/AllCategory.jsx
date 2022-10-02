@@ -3,7 +3,7 @@ import React from 'react'
 import AllCatagorymenu from '../Components/AllCategoryComponents/AllCatagorymenu'
 import AllCatagoryDescription from '../Components/AllCategoryComponents/AllCategoryDescription'
 import AllCatagoryCarousel from '../Components/AllCategoryComponents/AllCatagoryCarousel'
-
+import StatisticsAllCatagory from '../Components/AllCategoryComponents/StatisticsAllCatagory'
 export const AllCategory = () => {
   return (
     <Box>
@@ -19,6 +19,7 @@ export const AllCategory = () => {
           <AllCatagorymenu />
           <AllCatagoryDescription />
       </Box>
+      <StatisticsAllCatagory />
     </Box>
   )
 }

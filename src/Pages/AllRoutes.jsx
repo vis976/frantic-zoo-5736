@@ -5,6 +5,7 @@ import Navbar from "../Components/Navbar"
 import ErrorComponents from '../Components/ErrorComponents'
 import { AllCategory } from "./AllCategory";
 import IndivisualProduct from './IndivisualProduct'
+import Cart from './Cart'
 import Products from './Products'
 function AllRoutes(){
     return(
@@ -15,6 +16,7 @@ function AllRoutes(){
             <Route path="/healthcare" element={<AllCategory />}/>
             <Route path="/healthcare/products" element={<Products />}/>
             <Route path="/healthcare/products/:id" element={<IndivisualProduct />}/>
+            <Route path="/cart" element={<Cart />}/>
             <Route  path="*" element={<ErrorComponents />} />
         </Routes>
         <Footer />

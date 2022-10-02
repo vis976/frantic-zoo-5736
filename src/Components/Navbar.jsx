@@ -152,6 +152,7 @@ const Navbar = () => {
                    <Flex>
                       <Image c='black' src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" />
                   </Flex>
+                   {/* Drop Down Login And  SignUp */}
                   <Box><SignupSlider />
                     </Box>
                     <Box>
@@ -234,6 +235,19 @@ const Navbar = () => {
                       RTPCR
                     </Text>
                   </Flex>
+                  <Link to="/healthcare/products">
+                      <Text
+                        transition="all .4s ease"
+                        borderBottom="2px solid rgb(16, 132, 126, 0) "
+                        marginLeft="-10px"
+                        _hover={{
+                          borderBottom: "1px solid black",
+                          transition: "all .4s ease",
+                        }}
+                      >
+                        All Products
+                      </Text>
+                    </Link>
                   <Flex
                     width="32%"
                     h="100%"
