@@ -14,16 +14,15 @@ import {
   Image,
   Center,
 } from "@chakra-ui/react";
-import logo from "../Media/logo.png";
 import { HamburgerIcon, CloseIcon, SearchIcon } from "@chakra-ui/icons";
-import { PincodeSlider } from "../Components/NavbarComponents/PincodeSlider.jsx";
-import { LoginSignupSlider } from "../Components/NavbarComponents/LoginSignupSlider";
-import { useState } from "react";
+ import { PincodeSlider } from "../Components/NavbarComponents/PincodeSlider.jsx";
+// import { LoginSignupSlider } from "../Components/NavbarComponents/LoginSignupSlider";
+ import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { LoginSLider } from "./NavbarComponents/LoginSlider";
-import { LoginIndivisualSlider } from "./NavbarComponents/LoginIndivisualSlider";
-import { getCartItems } from "../Redux/Cart/action";
+//import { useDispatch, useSelector } from "react-redux";
+// import { LoginSLider } from "./NavbarComponents/LoginSlider";
+// import { LoginIndivisualSlider } from "./NavbarComponents/LoginIndivisualSlider";
+// import { getCartItems } from "../Redux/Cart/action";
 
 const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
@@ -44,18 +43,19 @@ const Navbar = () => {
       setNav(true);
     }
   }
-const isAuth=useSelector((store)=>store.auth.isAuth)
-  console.log(isAuth,"isauth")
-  const userId= useSelector((store)=>store.auth.id)
+  let cartData = "cart"
+// const isAuth=useSelector((store)=>store.auth.isAuth)
+//   console.log(isAuth,"isauth")
+//   const userId= useSelector((store)=>store.auth.id)
 
-  //! total cart items
-  const dispatch = useDispatch();
-  useEffect(() => {
-    if(userId){
-      dispatch(getCartItems(userId))
-    }
-  },[dispatch])
-  const cartData= useSelector((store)=>store.cart.cart)
+//   //! total cart items
+//   const dispatch = useDispatch();
+//   useEffect(() => {
+//     if(userId){
+//       dispatch(getCartItems(userId))
+//     }
+//   },[dispatch])
+//   const cartData= useSelector((store)=>store.cart.cart)
 
   return (
     <Box height={nav ? "123px" : "80px"}>
@@ -63,7 +63,7 @@ const isAuth=useSelector((store)=>store.auth.isAuth)
         // className={nav ? "nav" : "notNav"}
         position="fixed"
         w="100%"
-        bg=" rgb(16, 132, 126) none repeat scroll 0% 0% / auto padding-box border-box"
+        bg="rgb(238,244,255) none repeat scroll 0% 0% / auto padding-box border-box"
         padding="15px 0px"
         outline="rgb(79, 88, 94) none 0px"
         vertical-align="baseline"
@@ -110,7 +110,7 @@ const isAuth=useSelector((store)=>store.auth.isAuth)
                 margin="0px "
                 padding="0px "
                 vertical-align="baseline"
-                src={logo}
+                src="https://assets.pharmeasy.in/apothecary/images/logo_big.svg?dim=256x0"
               />
             </Link>
           </Flex>
@@ -136,7 +136,7 @@ const isAuth=useSelector((store)=>store.auth.isAuth)
                   // align="center"
                   fontWeight="400"
                 >
-                  <PincodeSlider />
+                  <PincodeSlider /> 
                 </HStack>
                 <Input
                   className="searchInput"
@@ -168,7 +168,7 @@ const isAuth=useSelector((store)=>store.auth.isAuth)
                 <HStack w="22%" justify="space-between" px={"2%"}>
                   <Flex>
                     <Image src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" />
-                    <LoginSignupSlider />
+                    {/* <LoginSignupSlider /> */}
                   </Flex>
                   <Link to="/cart">
                     <Flex  position="relative">
@@ -199,7 +199,7 @@ const isAuth=useSelector((store)=>store.auth.isAuth)
                     width="42%"
                     h="100%"
                     justify="space-between"
-                    color="white"
+                    color="rgb(48,54,60)"
                     align="center"
                     fontSize="16px"
                   >
@@ -207,7 +207,7 @@ const isAuth=useSelector((store)=>store.auth.isAuth)
                       transition="all .4s ease"
                       borderBottom="2px solid rgba(16, 132, 126, 0) "
                       _hover={{
-                        borderBottom: "2px solid white",
+                        borderBottom: "1px solid black",
                         transition: "all .4s ease",
                       }}
                     >
@@ -218,7 +218,7 @@ const isAuth=useSelector((store)=>store.auth.isAuth)
                         transition="all .4s ease"
                         borderBottom="2px solid rgb(16, 132, 126, 0) "
                         _hover={{
-                          borderBottom: "2px solid white",
+                          borderBottom: "1px solid black",
                           transition: "all .4s ease",
                         }}
                       >
@@ -229,7 +229,7 @@ const isAuth=useSelector((store)=>store.auth.isAuth)
                       transition="all .4s ease"
                       borderBottom="2px solid rgb(16, 132, 126, 0) "
                       _hover={{
-                        borderBottom: "2px solid white",
+                        borderBottom: "1px solid black",
                         transition: "all .4s ease",
                       }}
                     >
@@ -239,7 +239,7 @@ const isAuth=useSelector((store)=>store.auth.isAuth)
                       transition="all .4s ease"
                       borderBottom="2px solid rgb(16, 132, 126, 0) "
                       _hover={{
-                        borderBottom: "2px solid white",
+                        borderBottom: "1px solid black",
                         transition: "all .4s ease",
                       }}
                     >
@@ -254,20 +254,20 @@ const isAuth=useSelector((store)=>store.auth.isAuth)
                     align="center"
                   >
                     <Flex>
-                      <Image src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" />
-                      <Text color="white">Offers</Text>
+                      <Image color='black' src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" />
+                      <Text color="black">Offers</Text>
                     </Flex>
                     <Flex>
-                      <Image src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" />
+                      <Image color='black' src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" />
                       {/* {isAuth &&} */}
-                      <LoginIndivisualSlider font={'16px'} color={'#fff'} />
+                      {/* <LoginIndivisualSlider font={'16px'} color={'#fff'} /> */}
                       {/* <LoginSLider/> */}
                     </Flex>
                     <Link to="/cart">
                       <Flex position="relative">
-                        <Image src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" />
-                        <Text color="white">Cart</Text>
-                        <Center position="absolute" left="-3" top="-2" variant="solid" bg="#f76b6c" colorscheme="#f76b6c" borderRadius="50" w="1.6rem" h="1rem" color="white" fontSize="11" fontWeight="bold">
+                        <Image color={"black"} src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" />
+                        <Text color="black">Cart</Text>
+                        <Center position="absolute" left="-3" top="-2" variant="solid" bg="#f76b6c" colorscheme="#f76b6c" borderRadius="60" w="1.6rem" h="1rem" color="black" fontSize="11" fontWeight="bold">
                         {cartData?.length}
                       </Center>
                       </Flex>

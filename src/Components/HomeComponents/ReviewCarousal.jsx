@@ -1,8 +1,8 @@
 import { Box, Flex, Text } from '@chakra-ui/react'
 import React from 'react'
-import ReviewCarouselElements from './ReviewCarousalElements'
+import ReviewCarousalElements from './ReviewCarousalElements'
 
- const ReviewCarousel = () => {
+ const ReviewCarousal = () => {
   return (
     <Box 
     h="24rem"
@@ -22,9 +22,9 @@ import ReviewCarouselElements from './ReviewCarousalElements'
                 <Flex className="arrow"  w="9rem" h="100%"></Flex>
             </Flex>
         </Flex>
-        <ReviewCarouselElements />
+        <ReviewCarousalElements />
     </Box>
   )
 }
 
-export default ReviewCarousel
+export default ReviewCarousal

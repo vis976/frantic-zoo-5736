@@ -9,8 +9,9 @@ import { BsArrowLeftShort } from "react-icons/bs";
 import { BsArrowRightShort } from "react-icons/bs";
 
 // Settings for the slider
-import {reviewData} from "../../DataMedia/reviewData"
-import ReviewCarouselCard from './ReviewCarousalCard';
+
+import ReviewCarousalCard from './ReviewCarousalCard';
+import { reviewData } from '../../DataMedia/reviewData';
 const settings = {
   dots: false,
   arrows: false,
@@ -23,7 +24,7 @@ const settings = {
   slidesToScroll: 1,
 };
 
-export default function ReviewCarouselElements() {
+export default function ReviewCarousalElements() {
 
   const [slider, setSlider] = React.useState()
 
@@ -74,7 +75,7 @@ export default function ReviewCarouselElements() {
         position="absolute"
         borderRadius="md"
         transition="all 0.4s ease"
-        right={2}
+        right={3}
         top={10}
         transform={'translate(0%, -50%)'}
         zIndex={2}
@@ -88,7 +89,7 @@ export default function ReviewCarouselElements() {
       {/* Slider */}
       <Slider  {...settings} ref={(slider) => setSlider(slider)}>
         {reviewData.map((elem, index) => (
-          <ReviewCarouselCard key={elem.id} elem={elem}/>
+          <ReviewCarousalCard key={elem.id} elem={elem}/>
         ))}
       </Slider>
     </Box>
