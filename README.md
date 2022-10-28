@@ -1,70 +1,86 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Pharmeasy- Cloned
 
-## Available Scripts
 
-In the project directory, you can run:
+![Logo](https://upload.wikimedia.org/wikipedia/commons/3/3a/PharmEasy_logo.png)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+PharmEasy is an Indian company involved in selling online medicines, diagnostics and telehealth.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This was a solo project of creating Pharmeasy website. This Project was made as a part of construct week curriculum of MASAI School.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Demo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Orginal website link: https://pharmeasy.in/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Cloned website link:  https://pharmeasybysumangiri.netlify.app/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**FrountEnd:** React, Redux, chakra UI.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Backend For Creating API:** Node, Express.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Features
 
-## Learn More
+- Working Login/ Sighup. (Storing Data in backend)
+- Fullscreen mode
+- Responsive navbar
+- Sorting and filtering of products
+- Add to cart, delete from cart functionality
+- Dynamic Products view
+- Storing cart items in backend for particular user
+- Dynamic Routing by using react-router-dom
+- State management by Redux
+- Can add products to cart only when user is logged in
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Screenshots
 
-### Code Splitting
+- Landing Page
+![Landing Page](https://github.com/SumanJK/Pharmeasy_clone/blob/main/screenshots/Screenshot%202022-07-25%20at%204.20.00%20PM.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Featured brands
+![brands](https://github.com/SumanJK/Pharmeasy_clone/blob/main/screenshots/Screenshot%202022-07-25%20at%204.20.43%20PM.png)
 
-### Analyzing the Bundle Size
+- Products catagory
+![Products catagory](https://github.com/SumanJK/Pharmeasy_clone/blob/main/screenshots/Screenshot%202022-07-25%20at%204.21.44%20PM.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Product page
+![Product page](https://github.com/SumanJK/Pharmeasy_clone/blob/main/screenshots/Screenshot%202022-07-25%20at%204.21.55%20PM.png)
 
-### Making a Progressive Web App
+- Indivisual product page
+![Indivisual product](https://github.com/SumanJK/Pharmeasy_clone/blob/main/screenshots/Screenshot%202022-07-25%20at%204.22.14%20PM.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Cart page (can add products after logging in)
+![Cart](https://github.com/SumanJK/Pharmeasy_clone/blob/main/screenshots/Screenshot%202022-07-25%20at%204.23.59%20PM.png)
 
-### Advanced Configuration
+- Login/Register (sidebar)
+![register/logn](https://github.com/SumanJK/Pharmeasy_clone/blob/main/screenshots/Screenshot%202022-07-25%20at%204.24.35%20PM.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## End Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+It was an indivisual project that I have built in 5 days after learning react and redux. Implemented both frontend and backend. I have used Chakra UI for UI design. I tried to do as much functionality as I could do in just 5 days. Need to fix/ modify the site in some areas. Thank you for visiting my github 🤍.
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+
+## Some Important Notes
+
+- Can't add products to cart with out logging in. 
+
+## Limitations
+
+Pages are not responsible. check out functionality needs to be added.
+
+
+
