@@ -15,27 +15,21 @@ This was a solo project of creating Pharmeasy website. This Project was made as 
 
 Orginal website link: https://pharmeasy.in/
 
-Cloned website link:  https://pharmeasybysumangiri.netlify.app/
+Cloned website link:  https://vocal-jalebi-59c991.netlify.app/
 
 
 ## Tech Stack
 
-**FrountEnd:** React, Redux, chakra UI.
-
-**Backend For Creating API:** Node, Express.
+**FrountEnd:** React, chakra UI.
 
 
 ## Features
 
-- Working Login/ Sighup. (Storing Data in backend)
+- Working Login/ Sighup. (Using Local Storage)
 - Fullscreen mode
 - Responsive navbar
-- Sorting and filtering of products
-- Add to cart, delete from cart functionality
 - Dynamic Products view
-- Storing cart items in backend for particular user
 - Dynamic Routing by using react-router-dom
-- State management by Redux
 - Can add products to cart only when user is logged in
 
 
@@ -65,7 +59,7 @@ Cloned website link:  https://pharmeasybysumangiri.netlify.app/
 
 ## End Notes
 
-It was an indivisual project that I have built in 5 days after learning react and redux. Implemented both frontend and backend. I have used Chakra UI for UI design. I tried to do as much functionality as I could do in just 5 days. Need to fix/ modify the site in some areas. Thank you for visiting my github 🤍.
+It was an indivisual project that I have built in 5 days after learning react. Implemented frontend. I have used Chakra UI for UI design. I tried to do as much functionality as I could do in just 5 days. Need to fix/ modify the site in some areas. Thank you for visiting my github 🤍.
 
 
 
